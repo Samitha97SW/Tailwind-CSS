@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="font-nunito">
+    
+<!-- navigation bar-->
+<header>
+    <nav class="flex items-center justify-between mx-10 mt-2">
+        <div>
+            <img class="w-40 " src="/img/logo.png" alt="">
+        </div>
+        <div
+            class="nav-links lg:static absolute lg:min-h-fit lg:w-auto bg-white min-h-[60vh] left-0 top-[-100%] w-full flex items-center px-5">
+            <ul class="flex flex-col gap-8 lg:gap-6 lg:items-center lg:flex-row">
+                <li>
+                    <a class="hover:text-gray-500" href="#">Home</a>
+                </li>
+                <!-- <li class="">
+                    <button>Listing</button>
+                    <div>
+                        <ul>  
+                            <li>
+                                <a href="#">Listing Type 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Listing Type 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> -->
+                <li>
+                    <a class="hover:text-gray-500" href="#">Listing</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-500" href="#">Services</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-500" href="#">Blog</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-500" href="#">About</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-500" href="#">Contact Us</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-500" href="#">Pages</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-5">
+            <button class="px-6 py-2 text-white bg-blue-800 rounded-full hover:bg-blue-400">Get a Quote</button>
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon>
+        </div>
+    </nav>
+</header>
+
+<!-- navigation bar script-->
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[20%]')
+    }
+</script>
+
+<!-- hero section-->
+<div class="flex flex-col justify-center items-center mx-10 py-5 lg:flex-row lg:py-10 lg:gap-20 lg:pt-20">
+    <div class="lg:pl-10 lg:w-3/5">
+        <div class="text-center lg:text-left">
+            <h1 class="text-4xl font-bold lg:text-6xl">Bring Your Family's Happiness to Your Dream House</h1>
+            <p class="text-[19px] text-gray-500 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quo nam modi equi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+            <form class="inline-flex mt-10 rounded-full bg-gray-100 py-2 lg:w-full lg:justify-between">
+                <div class="inline-flex pl-5 items-center">
+                    <ion-icon class="w-4 h-4 pr-2" name="search-outline"></ion-icon>
+                    <input class="bg-gray-100 text-[14px]" type="search" placeholder="Search Here">
+                </div>
+                <div class="pr-2">
+                    <button
+                    class="inline-flex items-center text-[16px] px-4 py-2 text-white bg-blue-800 rounded-full hover:bg-blue-400 lg:px-10 lg:py-3">Search</button>
+                </div> 
+            </form>
+        </div>
+        <div class="mt-10 flex gap-10 px-5 text-center mb-10 lg:text-left lg:px-0">
+            <div>
+                <h1 class="text-[30px] text-gray-800 font-bold">280+</h1>
+                <p class="text-[17px] text-gray-500">Awards Winning</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] text-gray-800 font-bold">78+</h1>
+                <p class="text-[17px] text-gray-500">Property Ready</p>
+            </div>
+            <div>
+                <h1 class="text-[30px] text-gray-800 font-bold">298+</h1>
+                <p class="text-[17px] text-gray-500">Happy Customers</p>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 lg:mt-0 lg:w-2/5">
+        <img class="rounded-3xl h-auto max-w-[90%] mx-5 lg:h-full lg:w-auto" src="/img/hero.jpg" alt="">
+    </div>
+</div>
+
+<!-- featured listing -->
+<div class="grid grid-cols-1 mt-10 mx-10 text-center lg:mt-32 lg:grid-cols-2 lg:mx-0">
+    <h1 class="text-[30px] text-gray-800 font-bold lg:text-left lg:pl-[70px] lg:text-[50px]">Featured Listing</h1>
+    <p class="text-[19px] text-gray-500 lg:text-left lg:pr-12 lg:pl-5">Lorem ipsum dolor sit ame consectetur adipisicing elit. Quos quo nam modi equi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+</div>
+
+<!-- listing images-->
+<div class="grid grid-cols-1 mt-10 mx-10 gap-10 lg:grid-cols-4 lg:mt-20 lg:gap-5 lg:mx-[50px]">
+    <div class="flex flex-col relative lg:mt-4">
+        <img class="w-[350px] h-[300px] rounded-2xl" src="/img/list1.jpg" alt="">
+        <p class="text-[20px] font-semibold text-white bg-gray-900 rounded-full px-6 py-2 absolute top-4 left-4">
+            $2,800,-</p>
+        <h2 class="text-[30px] text-gray-800 font-bold pl-3 z-10 lg:text-[40px] lg:mt-5">Atlaz Standard House</h2>
+        <div class="flex flex-row items-center h-10 lg:mt-5">
+            <ion-icon class="w-10 h-7" name="location-sharp"></ion-icon>
+            <p class="text-[19px] text-gray-500">Pluto Street, Indonesia</p>
+        </div>
+    </div>
+    <div class="flex flex-col relative lg:mt-4">
+        <img class="w-[350px] h-[300px] rounded-2xl" src="/img/list2.jpg" alt="">
+        <p class="text-[20px] font-semibold text-white bg-gray-900 rounded-full px-6 py-2 absolute top-4 left-4">
+            $4,800,-</p>
+        <h2 class="text-[30px] text-gray-800 font-bold pl-3 z-10 lg:text-[40px] lg:mt-5">Qiri Minimalist House</h2>
+        <div class="flex flex-row items-center h-10 lg:mt-5">
+            <ion-icon class="w-10 h-7" name="location-sharp"></ion-icon>
+            <p class="text-[19px] text-gray-500">Jupitar Street, Indonesia</p>
+        </div>
+    </div>
+    <div class="flex flex-col relative lg:mt-4">
+        <img class="w-[350px] h-[300px] rounded-2xl" src="/img/list3.jpg" alt="">
+        <p class="text-[20px] font-semibold text-white bg-gray-900 rounded-full px-6 py-2 absolute top-4 left-4">
+            $6,800,-</p>
+        <h2 class="text-[30px] text-gray-800 font-bold pl-3 z-10 lg:text-[40px] lg:mt-5">Qanan Luxury House</h2>
+        <div class="flex flex-row items-center h-10 lg:mt-5">
+            <ion-icon class="w-10 h-7" name="location-sharp"></ion-icon>
+            <p class="text-[19px] text-gray-500">Mars Street, Indonesia</p>
+        </div>
+    </div>
+    <div class="flex flex-col relative lg:mt-4">
+        <img class="w-[350px] h-[300px] rounded-2xl" src="/img/list4.jpg" alt="">
+        <p class="text-[20px] font-semibold text-white bg-gray-900 rounded-full px-6 py-2 absolute top-4 left-4">
+            $8,800,-</p>
+        <h2 class="text-[30px] text-gray-800 font-bold pl-3 z-10 lg:text-[40px] lg:mt-5">Tingah Elegant House</h2>
+        <div class="flex flex-row items-center h-10 lg:mt-5">
+            <ion-icon class="w-10 h-7" name="location-sharp"></ion-icon>
+            <p class="text-[19px] text-gray-500">Venus Street, Indonesia</p>
+        </div>
+    </div>
+</div>
+
+<!-- text and see more button-->
+<div class="flex flex-col mt-10 mx-10 text-center items-center gap-0 lg:mt-24 lg:flex-row lg:mx-[50px]">
+    <p class="text-[19px] text-gray-500 lg:text-left lg:pr-10">Lorem ipsum dolor sit ame consectetur adipisicing elit. Quos quo nam modi equi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+    <button class="py-3 px-10 text-black mt-5 font-semibold text-[19px] rounded-full border-solid border-2 border-black hover:bg-blue-400 lg:w-[200px] lg:px-5">See More</button>
+</div>
+
+<!-- vision mission-->
+<div class="grid grid-cols-1 gap-10 mt-10 bg-gray-100/50 lg:grid-cols-2 lg:mx-10">
+    <div class="px-10 lg:py-10">
+        <h2 class="text-[30px] text-gray-800 font-bold lg:text-[50px]">Our Vision</h2>
+        <p class="text-[19px] text-gray-500 lg:mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quo nam modiequi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+        <img class="mt-7 h-[390px] w-[600px] rounded-2xl hidden sm:block" src="/img/vision.jpg" alt="">
+    </div>
+    <div class="px-10 lg:py-10">
+        <img class=" mt-7 h-[390px] w-[600px] rounded-2xl hidden sm:block" src="/img/mission.jpg" alt="">
+        <h2 class="text-[30px] text-gray-800 font-bold lg:text-[50px]">Our Mision</h2>
+        <p class="text-[19px] text-gray-500 lg:mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quo nam modiequi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+    </div>
+</div>
+
+<!-- text section-->
+<div class="grid grid-cols-1 mt-10 mx-10 text-center lg:mt-32 lg:grid-cols-2 lg:mx-0">
+    <h1 class="text-[30px] text-gray-800 font-bold lg:text-left lg:pl-[70px] lg:text-[50px]">Easy Step to Buy Property on Dhalem Real Estate</h1>
+    <p class="text-[19px] text-gray-500 lg:text-left lg:pr-12 lg:pl-16">Lorem ipsum dolor sit ame consectetur adipisicing elit. Quos quo nam modi equi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+</div>
+
+<!-- list text section-->
+<div class="grid grid-cols-1 mt-20 mx-10 gap-10 lg:grid-cols-4">
+    
+    <!-- Item 1 -->
+    <div class="flex flex-col ">
+        <div class="inline-flex items-baseline gap-5 md:hidden">
+            <h1 class="flex items-center justify-center w-[65px] h-[65px] font-bold text-[30px] text-white bg-gray-900 rounded-full">
+                1.</h1>
+            <h2 class="text-[30px] mt-5 font-bold text-gray-800 font-boldrelative z-10 ">View Listing</h2>
+        </div>
+        <div class="hidden sm:block">
+            <h1 class="flex items-center justify-center w-[65px] h-[65px] font-bold text-[30px] text-white bg-gray-900 rounded-full">
+                1.</h1>
+            <h2 class="text-[40px] mt-5 font-bold text-gray-800 font-boldrelative z-10 ">View Listing</h2>
+        </div>
+        <p class="text-[20px] text-justify text-gray-500"">Lorem ipsum earum dolor sit
+            amsfet consectetur adipisicing elit. Quos quo nam
+            modi
+            equi, animi earum voluptatum.</p>
+    </div>
+    
+    <!-- Item 2 -->
+    <div class="flex flex-col ">
+        <div class="inline-flex items-baseline gap-5 md:hidden">
+            <h1 class="flex items-center justify-center w-[65px] h-[65px] font-bold text-[30px] text-white bg-gray-900 rounded-full">
+                2.</h1>
+            <h2 class="text-[30px] mt-5 font-bold text-gray-800 font-boldrelative z-10 ">Contact Us</h2>
+        </div>
+        <div class="hidden sm:block">
+            <h1 class="flex items-center justify-center w-[65px] h-[65px] font-bold text-[30px] text-white bg-gray-900 rounded-full">
+                2.</h1>
+            <h2 class="text-[40px] mt-5 font-bold text-gray-800 font-boldrelative z-10 ">Contact Us</h2>
+        </div>
+        <p class="text-[20px] text-justify text-gray-500"">Lorem ipsum earum dolor sit
+            amsfet consectetur adipisicing elit. Quos quo nam
+            modi
+            equi, animi earum voluptatum.</p>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="flex flex-col ">
+        <div class="inline-flex items-baseline gap-5 md:hidden">
+            <h1 class="flex items-center justify-center w-[65px] h-[65px] font-bold text-[30px] text-white bg-gray-900 rounded-full">
+                3.</h1>
+            <h2 class="text-[30px] mt-5 font-bold text-gray-800 font-boldrelative z-10 ">Request a Visit</h2>
+        </div>
+        <div class="hidden sm:block">
+            <h1 class="flex items-center justify-center w-[65px] h-[65px] font-bold text-[30px] text-white bg-gray-900 rounded-full">
+                3.</h1>
+            <h2 class="text-[40px] mt-5 font-bold text-gray-800 font-boldrelative z-10 ">Request a Visit</h2>
+        </div>
+        <p class="text-[20px] text-justify text-gray-500"">Lorem ipsum earum dolor sit
+            amsfet consectetur adipisicing elit. Quos quo nam
+            modi
+            equi, animi earum voluptatum.</p>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="flex flex-col ">
+        <div class="inline-flex items-baseline gap-5 md:hidden">
+            <h1 class="flex items-center justify-center w-[65px] h-[65px] font-bold text-[30px] text-white bg-gray-900 rounded-full">
+                4.</h1>
+            <h2 class="text-[30px] mt-5 font-bold text-gray-800 font-boldrelative z-10 ">Buy The House</h2>
+        </div>
+        <div class="hidden sm:block">
+            <h1 class="flex items-center justify-center w-[65px] h-[65px] font-bold text-[30px] text-white bg-gray-900 rounded-full">
+                4.</h1>
+            <h2 class="text-[40px] mt-5 font-bold text-gray-800 font-boldrelative z-10 ">Buy The House</h2>
+        </div>
+        <p class="text-[20px] text-justify text-gray-500"">Lorem ipsum earum dolor sit
+            amsfet consectetur adipisicing elit. Quos quo nam
+            modi
+            equi, animi earum voluptatum.</p>
+    </div>
+</div>
+
+<!-- text and see FAQ button-->
+<div class="flex flex-col mt-10 mx-10 text-center items-center gap-0 lg:mt-24 lg:flex-row lg:mx-[50px]">
+    <p class="text-[19px] text-gray-500 lg:text-left lg:pr-10">Lorem ipsum dolor sit ame consectetur adipisicing elit. Quos quo nam modi equi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+    <button class="py-3 px-10 text-black mt-5 font-semibold text-[19px] rounded-full border-solid border-2 border-black hover:bg-blue-400 lg:w-[200px] lg:px-5">See Our FAQ</button>
+</div>
+
+<!-- why choose us-->
+<div class="flex flex-col justify-center items-center mx-auto mt-10 py-5 lg:flex-row lg:py-10 lg:px-10 lg:gap-14 lg:pt-20">
+    <div class="lg:pl-10 lg:w-3/5">
+        <div class="text-center lg:text-left">
+            <h1 class="text-[30px] font-bold lg:text-6xl">Why Choose us for Your House Needs?</h1>
+            <p class="text-[19px] text-gray-500 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quo nam modi equi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+        </div>
+        <div class="mt-5">
+            <div class="grid grid-rows-3 gap-y-10">
+                <div class="px-5 py-4 rounded-2xl hover:shadow-lg">
+                    <div class="flex items-center justify-start ">
+                        <ion-icon name="checkmark-outline"
+                        class=" text-white bg-gray-900 rounded-full p-2 w-[35px] h-[30px] lg:w-[35px]"></ion-icon>
+                        <h1 class="ml-4 font-bold text-[30px] text-gray-950"> Comfortable Home Design</h1>
+                    </div>
+                    <p class="lg:ml-[70px] text-[19px] mt-2 pr-5 text-justify text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing consectetur adipisicing Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="px-5 py-4 rounded-2xl hover:shadow-lg">
+                    <div class="flex items-center justify-start ">
+                        <ion-icon name="checkmark-outline"
+                        class=" text-white bg-gray-900 rounded-full p-2 w-[35px] h-[30px] lg:w-[35px]"></ion-icon>
+                        <h1 class="ml-4 font-bold text-[30px] text-gray-950"> Comfortable Home Design</h1>
+                    </div>
+                    <p class="lg:ml-[70px] text-[19px] mt-2 pr-5 text-justify text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing consectetur adipisicing Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="px-5 py-4 rounded-2xl hover:shadow-lg">
+                    <div class="flex items-center justify-start ">
+                        <ion-icon name="checkmark-outline"
+                        class=" text-white bg-gray-900 rounded-full p-2 w-[35px] h-[30px] lg:w-[35px]"></ion-icon>
+                        <h1 class="ml-4 font-bold text-[30px] text-gray-950"> Comfortable Home Design</h1>
+                    </div>
+                    <p class="lg:ml-[70px] text-[19px] mt-2 pr-5 text-justify text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing consectetur adipisicing Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 lg:w-1/2">
+        <img class="rounded-3xl h-auto max-w-[90%] mx-5 lg:h-[700px] lg:w-auto lg:mx0" src="/img/why.jpg" alt="">
+    </div>
+</div>
+
+<!-- what says-->
+<div class="grid grid-cols-1 mt-10 mx-10 text-center lg:mt-32 lg:grid-cols-2 lg:mx-0">
+    <h1 class="text-[30px] text-gray-800 font-bold lg:text-left lg:pl-[70px] lg:text-[50px]">What Says from Our Happy Customers</h1>
+    <p class="text-[19px] text-gray-500 lg:text-left lg:pr-12 lg:pl-16">Lorem ipsum dolor sit ame consectetur adipisicing elit. Quos quo nam modi equi, animi earum voluptatum quis commodi eligendi laborum? Atque.</p>
+</div>
+
+<!-- customer reviews section-->
+<div class="grid lg:grid-cols-4 mt-16 gap-7 mx-10">
+    <div class="flex flex-col rounded-3xl border hover:shadow-lg px-5 md:border-transparent">
+        <p class="py-2 leading-9 text-justify text-gray-400">Lorem ipsum dolor sit amet consectetur quos quo nam modi equi adipisicing elit. Quos quo nam modi equi, animi earum voluptatum</p>
+        <div class="flex items-center py-3">
+            <img class="rounded-full w-11" src="/img/man.png" alt="">
+            <div class="ml-5">
+                <h2 class="font-bold text-[20px] text-gray-800  ">Shoo Phar Mhan</h2>
+                <p class="pt-1 text-gray-400 ">Kang Masak</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col rounded-3xl border hover:shadow-lg px-5 md:border-transparent">
+        <p class="py-2 leading-9 text-justify text-gray-400">Lorem ipsum dolor sit amet consectetur quos quo nam modi equi adipisicing elit. Quos quo nam modi equi, animi earum voluptatum</p>
+        <div class="flex items-center py-3">
+            <img class="rounded-full w-11" src="/img/man.png" alt="">
+            <div class="ml-5">
+                <h2 class="font-bold text-[20px] text-gray-800  ">Shoo Phar Mhan</h2>
+                <p class="pt-1 text-gray-400 ">Kang Masak</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col rounded-3xl border hover:shadow-lg px-5 md:border-transparent">
+        <p class="py-2 leading-9 text-justify text-gray-400">Lorem ipsum dolor sit amet consectetur quos quo nam modi equi adipisicing elit. Quos quo nam modi equi, animi earum voluptatum</p>
+        <div class="flex items-center py-3">
+            <img class="rounded-full w-11" src="/img/man.png" alt="">
+            <div class="ml-5">
+                <h2 class="font-bold text-[20px] text-gray-800  ">Shoo Phar Mhan</h2>
+                <p class="pt-1 text-gray-400 ">Kang Masak</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col rounded-3xl border hover:shadow-lg px-5 md:border-transparent">
+        <p class="py-2 leading-9 text-justify text-gray-400">Lorem ipsum dolor sit amet consectetur quos quo nam modi equi adipisicing elit. Quos quo nam modi equi, animi earum voluptatum</p>
+        <div class="flex items-center py-3">
+            <img class="rounded-full w-11" src="/img/man.png" alt="">
+            <div class="ml-5">
+                <h2 class="font-bold text-[20px] text-gray-800  ">Shoo Phar Mhan</h2>
+                <p class="pt-1 text-gray-400 ">Kang Masak</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- let's move text -->
+<div class="flex flex-col lg:gap-[100px] mt-20 lg:mt-32 mx-10 lg:flex-row">
+    <div class="">
+        <img class="h-[544px] lg:mt-5 rounded-3xl hidden sm:block" src="/img/dream.jpg" alt="">
+    </div>
+    <div class="items-center justify- text-center lg:text-left lg:w-[50%] lg:mt-10">
+        <div class="lg:text-left">
+            <h1 class="lg:text-6xl text-4xl font-bold text-gray-800">Lets Move to Your Dream Family Home</h1>
+            <p class="text-[19px] mt-5 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet Quos quo nam modi equi.</p>
+        </div>
+        <button class="mx-auto justify-center px-6 py-5 mt-5  text-white bg-blue-800 rounded-full w-60 hover:bg-blue-400">Get Quote Now</button>
+        <div class="grid grid-cols-3 items-center mt-10 gap-5">
+            <div class="flex flex-col">
+                <img class="rounded-md lg:rounded-3xl" src="/img/d1.jpg" alt="">
+            </div>
+            <div class="flex flex-col">
+                <img class="rounded-md lg:rounded-3xl" src="/img/d2.jpg" alt="">
+            </div>
+            <div class="flex flex-col">
+                <img class="rounded-md lg:rounded-3xl" src="/img/d3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer section-->
+<footer class="grid grid-cols-1 px-10 lg:grid-cols-4 lg:gap-20 mt-20 pb-10 pt-10 bg-gray-200">
+    <div class="lg:pl-10">
+        <img class="w-36" src="/img/logo.png" alt="">
+        <p class="text-[18px] text-gray-500 leading-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quo nam
+            Lorem ipsum dod modi equi.</p>
+    </div>
+    <div class="mt-10 lg:mt-5">
+        <h2 class="font-bold">Useful Links</h2>
+        <ul class="mt-5 font-medium leading-10">
+            <li><a href="#">Listing</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Our Team</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2 class="font-bold mt-5">Get in Touch</h2>
+        <ul class="mt-5 ">
+            <li class="flex mt-5"><ion-icon name="location-sharp"></ion-icon>
+                <p class=" px-5 text-[18px] text-gray-500">123 Anywhere Street, Any City, 12345 ST, Indonesia</p>
+            </li>
+            <li class="flex items-center mt-5"><ion-icon name="call"></ion-icon>
+                <p class=" px-5 text-[18px] text-gray-500">+123 456 7890</p>
+            </li>
+            <li class="flex items-center mt-5"><ion-icon name="mail"></ion-icon>
+                <p class=" px-5 text-[18px] text-gray-500">hello@larkhomes.com</p>
+            </li>
+        </ul>
+    </div>
+    <div class="pr-10">
+        <h2 class="font-bold mt-5">Newsletter</h2>
+        <ul class="mt-5">
+            <li>
+                <form class="">
+                    <div class="h-10 px-5 py-2 bg-gray-100 rounded-3xl">Your Email
+                    </div>
+                </form>
+            </li>
+            <li><button
+                    class="w-40 px-6 py-2 mt-5 text-white bg-blue-800 rounded-full hover:bg-blue-400">Submit</button>
+            </li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
